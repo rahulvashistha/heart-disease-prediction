@@ -1,4 +1,4 @@
-# ANN-implementation
+# heart-disease-prediciton
 Final Year Engineering Project
 
 ## Project Description
