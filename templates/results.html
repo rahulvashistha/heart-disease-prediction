@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+<!-- Static CSS -->
+<link rel="stylesheet" type="text/css" href="/static/results.css">
+{% endblock head %}
+
+{% block title %} Results {% endblock title %}
+{% block results %} active {% endblock results %}
+{% block body_class %}bgresults{% endblock body_class %}
+
+{% block body %}
+  <div class="container">
+  <br><br><br><br><br><br>
+    <center> <h1> Disease Prediction Result: </h1>  
+      <p><h3> {{to_print}} </h3></p>
+    </center>
+  <br><br><br><br><br><br>
+  </div>
+  <div class="container text-center">
+    <h4>Click here, to find more about our alogrithms.</h4>
+    <a class="btn btn-primary btn-lg" href="{{url_for('checkaccuracy')}}" role="button">Read More</a>
+  </div>
+
+{% endblock body %}

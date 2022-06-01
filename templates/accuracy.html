@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block head %}
+<!-- Static CSS -->
+<link rel="stylesheet" type="text/css" href="/static/accuracy.css">
+{% endblock head %}
+
+{% block title %} Accuracy {% endblock title %}
+{% block accuracy %} active {% endblock accuracy %}
+{% block body_class %}bgaccuracy{% endblock body_class %}
+
+{% block body %}
+
+    <div class="container my-2 text-center">
+        <h1>Prediction Algorithm Accuracy</h1>
+    </div>
+    
+    <div class="container d-flex" id="algo-group">
+        <div class="my-2 col-md-4" id="algorithm-1">
+            <h3>1. KNN Algorithm: </h3>
+                <p>K Nearest Neighbor (KNN) is intuitive to understand and an easy to implement the algorithm. Beginners can master this algorithm even in the early phases of their Machine Learning studies.</p>
+                                
+                <p><b>KNN accuracy on train data:  83.14606741573034</b></p>
+                <p><b>KNN accuracy on test data:  78.36734693877551</b></p>
+
+                <a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm"><input type="button" value="Read More"></a>
+        </div>
+        <div class="my-2 col-md-4" id="algorithm-2">
+            <h3>2. Logistic Regression: </h3>
+                <p>Logistic regression is one of the most popular Machine Learning algorithms, which comes under the Supervised Learning technique. It is used for predicting the categorical dependent variable using a given set of independent variables. Logistic regression predicts the output of a categorical dependent variable.</p>
+
+                    <p><b>Logistic Regression accuracy on the train data:  71.80796731358528</b></p>
+                    <p><b>Logistic Regression accuracy on the test data:  71.83673469387755</b></p>
+
+                    <a href="https://en.wikipedia.org/wiki/Linear_regression"><input type="button" value="Read More"></a>
+
+        </div>
+        <div class="my-2 col-md-4" id="algorithm-3">    
+            <h3>3. Support Vector Machine: </h3>
+                <p>Support Vector Machine (SVM) Algorithm - Javatpoint next → ← prev Support Vector Machine Algorithm Support Vector Machine or SVM is one of the most popular Supervised Learning algorithms, which is used for Classification as well as Regression problems.</p>
+
+                    <p><b>SVM accuracy on the train data:  80.7967313585291</b></p>
+                    <p><b>SVM accuracy on the test data:  77.9591836734694</b></p>
+
+                    <a href="https://en.wikipedia.org/wiki/Support-vector_machine"><input type="button" value="Read More"></a>
+        </div>
+    </div>
+{% endblock body %}

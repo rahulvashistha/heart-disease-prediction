@@ -1,0 +1,39 @@
+/* body {
+    background-image: url("bg1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+form {
+    /*border: 1px solid #000; 
+    background-color: #FFF; /*Checking - Comment later*/
+
+    height: 800px;
+    width: 650px;
+    margin-top: 5px;
+    padding: 0px;
+    margin-left: 5rem;
+    margin-top: 2rem;
+}
+#form-data {
+    display: flex;
+
+}
+label {
+    /*border: 1px solid #000; /*Checking - Comment later*/
+    
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;    
+    height: 30px;
+    width: 250px;
+    margin-top: 10px;
+}
+input {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    max-height: 30px;
+    max-width: 400px;
+}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+<!-- Static CSS -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+
+{% endblock head %}
+
+{% block title %} Home {% endblock title %}
+{% block home %} active {% endblock home %}
+{% block body_class %}bghome{% endblock body_class %}
+
+{% block body %}
+<div class="container text-center my-5" id="divhome">
+    <p>
+        <h2 class="display-3">Heart Disease Prediction!</h2> 
+        <h5>Get your Heart Disease Predicted Anytime, Anywhere.</h5>
+        <br>
+        <a class="btn btn-primary btn-lg" href="{{url_for('getaprediction')}}" role="button">Predict</a>
+    </p>
+</div>
+{% endblock body %}
+

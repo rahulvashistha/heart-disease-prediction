@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Data Form</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='prediction.css') }}">
+
+{% endblock head %}
+
+{% block title %} Data Form {% endblock title %}
+{% block dataform %} active {% endblock dataform %}
+{% block body_class %}bgdataform{% endblock body_class %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict Your chances for Heart Disease</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <!-- -->
+            <div class="form-group" id="form-data">
+                <label for="Patient_Age" class="form-label">Enter Your Age:</label>
+                <input type="number" id="age" name="age" class="form-control" min="1" max="89" placeholder="Age between 1-89" required/>
+            </div>
+            <!-- 1 -->
+            <div class="form-group" id="form-data">
+                <label for="Patient_Gender" class="form-label">Enter Your Gender:</label>
+                <input id="gender" name="gender" class="form-control" list="genders" placeholder="" required/>
+                <datalist id="genders">
+                    <option value="Male"></option>
+                    <option value="Female"></option>
+                </datalist>
+            </div>
+            <!-- 2 -->
+            <div class="form-group" id="form-data">
+                <label for="Patient_ChestPainType" class="form-label">Chest Pain Type:</label>
+                <input id="Patient_ChestPainType" name="Patient_ChestPainType" class="form-control" list="Patient-Chest-Pain-Type" placeholder="" required/>
+                <datalist id="Patient-Chest-Pain-Type">
+                    <option value="Typical Angina"></option>
+                    <option value="Non-aginal Pain"></option>
+                    <option value="Atypical Angina"></option>
+                    <option value="Asymptomatic"></option>
+                </datalist>
+            </div>
+            <!-- 3 -->
+            <div class="form-group" id="form-data">
+                <label for="Patient_RestingBP" class="form-label">Resting Blood Pressure:</label>
+                <input type="number" id="Patient_RestingBP" name="Patient_RestingBP" class="form-control" min="60" max="200" placeholder="Blood Pressure between 60-200" required/>
+            </div>
+            <!-- 4 -->
+            <div class="form-group" id="form-data">
+                <label for="Patient_Cholesterol" class="form-label">Cholestrol:</label>
+                <input type="number" id="Patient_Cholesterol" name="Patient_Cholesterol" class="form-control" min="150" max="500" placeholder="Cholestrol between 150-500" required/>
+            </div>
+            <!-- 5 -->
+            <div class="form-group" id="form-data">
+                <label for="Patient_FastingBS" class="form-label">Blood Sugar Fasting:</label>
+                <input id="Patient_FastingBS" name="Patient_FastingBS" class="form-control"  list="blood-sugar-fasting" placeholder="" required/>
+                <datalist id="blood-sugar-fasting">
+                    <option value="<=120 mg/dl"></option>
+                    <option value=">120 mg/dl"></option>
+                </datalist>
+            </div>
+            <!-- 6 -->
+            <div class="form-group" id="form-data">
+                <label for="Patient_RestingECG" class="form-label">Rest ECG Result:</label>
+                <input id="Patient_RestingECG" name="Patient_RestingECG" class="form-control" list="rest-ecg" placeholder="" required/>
+                <datalist id="rest-ecg">
+                    <option value="Normal"></option>
+                    <option value="Abnormal"></option>
+                    <option value="LVH"></option>
+                </datalist>
+            </div>
+            <!-- 7 -->
+            <div class="form-group" id="form-data">
+                <label for="Patient_MaxHR" class="form-label">Max Heart Rate:</label>
+                <input type="number" id="Patient_MaxHR" name="Patient_MaxHR" class="form-control" min="40" max="200" placeholder="Hear Rate between 40-200" required/>
+            </div>
+            <!-- 8 -->
+            <div class="form-group" id="form-data">
+                <label for="Patient_ExerciseAngina" class="form-label">Excercise Induced Angina:</label>
+                <input id="Patient_ExerciseAngina" name="Patient_ExerciseAngina" class="form-control" list="induced-angina" placeholder="" required/>
+                <datalist id="induced-angina">
+                    <option value="No"></option>
+                    <option value="Yes"></option>
+                </datalist>
+            </div>
+            <!-- 9 -->
+            <div class="form-group" id="form-data">
+                <label for="Patient_Oldpeak-peak" class="form-label">Old Peak:</label>
+                <input type="number" id="Patient_Oldpeak" name="Patient_Oldpeak" class="form-control" min="0" max="6" step="0.1" placeholder="Old Peak between 0-6" required/>
+            </div>
+            <!-- 10 -->
+            <div class="form-group" id="form-data">
+                <label for="Patient_ST_Slope" class="form-label">ST Slope:</label>
+                <input id="Patient_ST_Slope" name="Patient_ST_Slope" class="form-control" list="st-slope" placeholder="" required/>
+                <datalist id="st-slope">
+                    <option value="Upsloping"></option>
+                    <option value="Flat"></option>
+                    <option value="Downsloping"></option>
+                </datalist>
+            </div>
+            <!-- 11 -->
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
